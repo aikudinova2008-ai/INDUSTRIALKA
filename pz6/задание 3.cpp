@@ -7,7 +7,7 @@ int main() {
     string s = to_string(x); // первый элемент записываем как строку
 
     for (int step = 1; step < n; step++) { // строим следующие элементы до
-        string next = "";
+        string next = ""; // сюда соберём новый элемент
         int len = s.length(); // длина текущей строки
         int i = 0;
         for (i = 0; i < len; ) { // идём по строке, i сдвигаем вручную внутри
