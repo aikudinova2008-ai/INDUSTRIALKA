@@ -3,7 +3,7 @@ using namespace std;
 int main() {
     int n, m, w; // строки, столбцы и количество грибов
     cin >> n >> m >> w;
-    bool grib[34][34] = {};   // с запасом
+    bool grib[34][34] = {};   // карта грибов, все false; с запасом
 
     for (int k = 0; k < w; k++) {
         int a, b; // координаты очередного гриба
@@ -16,14 +16,14 @@ int main() {
             if (grib[i][j]) { // идём по строкам поля
                 cout << '*';
             } else {
-                int cnt = 0;
+                int cnt = 0;     // счётчик соседних грибов
                 for (int di = -1; di <= 1; di++) { // сдвиг по строке: -1, 0, +1
                     for (int dj = -1; dj <= 1; dj++) {
                         if (di == 0 && dj == 0) continue; // саму клетку не считае
                         if (grib[i + di][j + dj]) cnt++; // сосед с грибом: увеличиваем счётчик
                     }
                 }
-                cout << cnt;
+                cout << cnt; // число грибов
             }
         }
         cout << endl;
