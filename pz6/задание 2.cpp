@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int main() {
-    int n, m, w;
+    int n, m, w; // строки, столбцы и количество грибов
     cin >> n >> m >> w;
     bool grib[34][34] = {};   // с запасом
 
