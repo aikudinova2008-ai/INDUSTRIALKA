@@ -3,11 +3,11 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            if (i + j < n - 1) {
+    for (int i = 0; i < n; i++) {  // идём по строкам квадрата сверху вниз
+        for (int j = 0; j < n; j++) { // идём по столбцам слева направо
+            if (i + j < n - 1) { // клетка выше побочной диагонали
                 cout << 0;
-            } else if (i + j == n - 1) {
+            } else if (i + j == n - 1) { / клетка лежит на побочной диагонали
                 cout << 1;
             } else {
                 cout << 2;
